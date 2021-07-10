@@ -31,21 +31,21 @@ $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $colors: (
-  "lemon-curry": #cc9c00,
-  "snow": #FFFCFF,
-  "light-green": #03B5AA,
-  "cinnabar": #F24236,
-  "deep-grey": #50514F
+  "nianza": #EAF4D3,
+  "nickel": #626C66,
+  "brass": #CA907E,
+  "chestnut": #994636,
+  "rifle-green": #434A42
 );
 
-$primary:       color("cinnabar");
-$secondary:     color("light-green");
+$primary:       color("brass");
+$secondary:     color("nickel");
 $success:       $green !default;
 $info:          $cyan !default;
-$warning:       color("lemon-curry");
+$warning:       color("chestnut");
 $danger:        $red !default;
-$light:         color("snow");
-$dark:          color("deep-grey");
+$light:         color("nianza");
+$dark:          color("rifle-green");
 
 $theme-colors: () !default;
 
@@ -113,7 +113,7 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                              $light;
+$link-color:                              $warning;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
