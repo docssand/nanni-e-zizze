@@ -12,11 +12,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "bootstrap": "4.1.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "node-sass": "4.14.1",
     "sass-loader": "10.1.1",
-    "vue": "^2.6.11",
+    "vue": "^2.6.14",
     "vueperslides": "^2.15.2",
     "webpack": "5.0.0"
   },
