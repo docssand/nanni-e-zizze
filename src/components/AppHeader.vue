@@ -21,7 +21,7 @@
         />
       </picture>
       <div>
-        <a href="#menu" class="header__menu">Menù</a>
+        <a href="#menu" class="header__menu d-none d-md-inline">Menù</a>
       </div>
       <div class="d-flex align-items-center">
         <div class="text-right">

@@ -2,25 +2,27 @@
   <div
     class="
       phone-cta
-      d-flex
-      justify-content-center
-      align-items-center
+      
       position-fixed
     "
     @mouseover="hover = true"
     @mouseleave="hover = false"
-    :class="{ 'phone-cta--active': hover }"
+    
   >
-    <div class="d-none d-md-block" @click="$emit('openPhoneModal')">
-      <font-awesome-icon
-        class="phone-cta__ico text-primary"
-        icon="phone"
-        href="tel:3333333333"
-      />
+    <div class="phone-cta__info d-flex align-items-center justify-content-between px-5 position-absolute" :class="{ 'phone-cta__info--active': hover }">
+      <div>
+        <div>mar-dom</div>
+        <div>19:00 - 23:00</div>
+      </div>
+      <div class="pr-5">
+        <a class="h5" href="tel:3333333333">3333333333</a>
+      </div>
     </div>
-    <div class="d-md-none">
+    <div class="phone-cta__content d-flex
+      justify-content-center
+      align-items-center" :class="{ 'phone-cta__content--active': hover }">
       <font-awesome-icon
-        class="phone-cta__ico text-primary"
+        class="ico text-primary"
         icon="phone"
         href="tel:3333333333"
       />
@@ -44,30 +46,67 @@ export default {
 </script>
 
 <style lang=scss>
+$phone-cta-size: 6rem;
+
 .phone-cta {
-  z-index: 10;
+  
   bottom: 10px;
   right: 10px;
 
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
+  height:$phone-cta-size;
+  width: $phone-cta-size;
+  
 
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-  -webkit-transition: box-shadow 0.5s ease-out;
-  -moz-transition: box-shadow 0.5s ease-out;
-  -o-transition: box-shadow 0.5s ease-out;
-  transition: box-shadow 0.5s ease-out;
-
-  &__ico {
-    font-size: 2rem;
-  }
-
-  &--active {
+  &__content {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
     background: #e0e0e0;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-    box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+    -webkit-transition: box-shadow 0.5s ease-out;
+    -moz-transition: box-shadow 0.5s ease-out;
+    -o-transition: box-shadow 0.5s ease-out;
+    transition: box-shadow 0.5s ease;
+
+    .ico {
+      font-size: 2rem;
+      transition: all 0.5s ease-out;
+    }
+
+    
+
+    &--active {
+      background: #e0e0e0;
+      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+      box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+
+      .ico {
+        font-size: 2.75rem;
+      }
+    }
   }
+
+  .phone-cta__info {
+      transform:scaleX(0);
+      transform-origin:right center;
+      transition: transform 0.5s ease;
+      z-index: 5;
+      right: calc(#{$phone-cta-size} * 0.5);
+      height: $phone-cta-size;
+      width: 40vw;
+      border-bottom-left-radius: 50px;
+      border-top-left-radius: 50px;
+      background-color: #e0e0e0;
+      box-shadow: inset 1px 1px 50px 1px rgba($color: #000000, $alpha: .25);
+
+      &--active {
+        transform:scaleX(1);
+        transform-origin:right center;
+      }
+    }
+  
+
+  
 }
 </style>

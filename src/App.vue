@@ -4,9 +4,7 @@
     <app-hero :slides="heroSlides" />
     <app-menu />
     <phoneCTA @openPhoneModal="openPhoneModal" />
-    <b-modal id="phoneModal" title="BootstrapVue">
-      <p class="my-4">Hello from modal!</p>
-    </b-modal>
+    <app-modal />
   </div>
 </template>
 
@@ -15,6 +13,7 @@ import AppHeader from "./components/AppHeader.vue";
 import AppHero from "./components/AppHero.vue";
 import PhoneCTA from "./components/PhoneCTA.vue";
 import AppMenu from "./components/AppMenu.vue";
+import AppModal from "./components/AppModal.vue";
 
 export default {
   name: "App",
@@ -23,6 +22,7 @@ export default {
     AppHero,
     PhoneCTA,
     AppMenu,
+    AppModal,
   },
   data() {
     return {
