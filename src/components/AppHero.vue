@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hero">
     <vueper-slides
       :parallax="parallax"
       :parallax-fixed-content="parallaxFixedContent"
@@ -37,4 +37,12 @@ export default {
 </script>
 
 <style lang="scss">
+.hero{
+  .vueperslide{
+    color: white;
+    &__title{
+      font-size: 2rem;
+    }
+  }
+}
 </style>
