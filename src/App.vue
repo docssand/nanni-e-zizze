@@ -3,8 +3,9 @@
     <app-header />
     <app-hero :slides="heroSlides" />
    <div id="menu">
-      <app-menu menuTitle="Pizze tonde" :products="products" />
-    <app-menu menuTitle="Pizze al taglio" :products="products" />
+      <app-menu menuTitle="Pizze a rotazione" :ingredients="ingredients" :products="specials" />
+      <app-menu menuTitle="Pizze tonde" :ingredients="ingredients" :products="products" />
+      <app-menu menuTitle="Pizze al taglio" :ingredients="ingredients" :products="products" />
    </div>
     <phoneCTA @openPhoneModal="openPhoneModal" />
     <app-modal />
@@ -29,6 +30,44 @@ export default {
   },
   data() {
     return {
+      ingredients: [
+        {
+          name: "salsiccia secca",
+          type: "carne",
+        },
+        {
+          name: "salsiccia fresca", 
+          type: "carne",
+        },
+        {
+          name: "speck",
+          type: "carne",
+        },
+        {
+          name: "prosciutto-cotto",
+          type: "carne"
+        },
+        {
+          name: "sugo di pomodoro",
+          type: "rossa",
+        },
+        {
+          name: "pomodorini",
+          type: "rossa",
+        },
+        {
+          name: "melanzana",
+          type: "vegana",
+        },
+        {
+          name: "mozzarella",
+          type: "formaggio"
+        },
+        {
+          name: "bufala",
+          type: "formaggio"
+        },
+      ],
       heroSlides: [
         {
           title: "Consegna a domicilio 🛵",
@@ -51,27 +90,35 @@ export default {
           image: require("@/assets/images/pizza3.jpg"),
         },
       ],
+      specials: [
+        {
+          image: "pizza1",
+          name: "Pizza Speciale",
+          ingredients: ["sugo di pomodoro", "bufala", "basilico", "olio EVO"],
+          special: true,
+        },
+        {
+          image: "pizza1",
+          name: "Pizza Specialissima",
+          ingredients: ["sugo di pomodoro", "bufala", "basilico", "olio EVO"],
+          special: true,
+        },
+      ],
       products: [
         {
           image: "pizza1",
           name: "Pizza Uno",
-          ingredients: "pomodoro, mozzarella, basilico, olio EVO",
-          allergens: "lattosio",
-          type: ["vegetariana", "rossa"],
+          ingredients: ["pomodoro", "mozzarella", "basilico", "olio EVO"],
         },
         {
           image: "pizza2",
           name: "Pizza Due",
-          ingredients: "pomodoro, mozzarella, salsiccia",
-          allergens: "lattosio",
-          type: ["carne", "rossa"],
+          ingredients: ["pomodoro", "mozzarella", "salsiccia"],
         },
         {
           image: "pizza3",
           name: "Pizza Tre",
-          ingredients: "pomodoro, funghi",
-          allergens: "",
-          type: ["vegetariana", "rossa"],
+          ingredients: ["pomodoro", "funghi"],
         }
       ]
     };

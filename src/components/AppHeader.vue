@@ -1,15 +1,11 @@
 <template>
-  <section class="header position-sticky bg-light">
+  <section class="header text-center
+        py-4 position-sticky bg-light">
     <div
-      class="
-        d-flex
-        flex-column flex-md-row
-        justify-content-between
-        align-items-center
-        py-4
-      "
+      class="header__content d-flex flex-column flex-md-row align-items-center justify-content-center"
     >
-      <picture>
+      <div class="header__logo">
+        <picture>
         <source
           srcset="@/assets/images/logo-mobile.png"
           media="(min-width: 800px)"
@@ -20,10 +16,11 @@
           alt="logo Nanni e Zizze"
         />
       </picture>
-      <div>
+      </div>
+      <div class="header__menu d-none d-md-block">
         <a href="#menu" class="header__menu d-none d-md-inline">Menù</a>
       </div>
-      <div class="d-flex align-items-center">
+      <div class="header__maps d-flex align-items-center">
         <div class="text-right">
           <a href="https://goo.gl/maps/6Lw38i62eK1PR8BE9" target="_blank"
             >Piazza Giacomo Matteotti, 28,<br
@@ -58,13 +55,28 @@ export default {
     height: 3rem;
   }
   &__menu {
-    font-size: 2em;
+    font-size: 2rem;
+    grid-area: menu;
   }
-  &__ico-maps {
-    font-size: 3em;
-    @include media-breakpoint-down("sm") {
+  &__maps {
+    grid-area: maps;
+  }
+  @include media-breakpoint-down("sm") {
+    &__ico-maps {
       font-size: 1.5em;
-    }
+    } 
+  }
+
+  @include media-breakpoint-up("md") {
+    &__logo {
+    flex: 0 1 20rem;
+  }
+  &__menu {
+    flex: 0 1 50rem;
+  }
+  &__maps {
+    flex: 0 1 20rem;
+  }
   }
 }
 </style>

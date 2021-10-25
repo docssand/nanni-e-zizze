@@ -1,5 +1,5 @@
 <template>
-  <div class="product-card d-flex shadow rounded-lg p-5">
+  <div class="product-card d-flex flex-column flex-md-row align-items-center shadow rounded-lg p-5" :class="{'product-card--special': product.special}">
     <div class="product-card__img">
       <img style="border-radius: 50%;" :src="require(`@/assets/images/${product.image}.jpg`)" alt="">
     </div>
@@ -8,10 +8,10 @@
       {{product.name}}
       </div>
       <div class="font-italic">
-        {{product.ingredients}}
+        <span v-for="(ingredient, i) in product.ingredients" :key="i">{{ ingredient }} </span>
       </div>
       <div class="font-weight-bold" v-if="product.allergens">
-        allergeni: {{product.allergens}}
+        allergeni: {{allergens}}
       </div>
       <div>
           <span v-for="(type, i) in product.type" :key="i">
@@ -29,6 +29,17 @@ export default {
     product: {
       type: Object,
       required: true,
+    },
+    ingredients: {
+      type: Array,
+    },
+  },
+  computed: {
+    allergens() {
+      return this.product.ingredients.forEach(element => {
+        if(this.ingredients.name === elementwh)
+          this.ingredients[element];
+      });
     }
   }
 }
@@ -40,9 +51,9 @@ $img-size: 6rem;
   transition: all .75s cubic-bezier(.17,.84,.44,1);
 
   &__img{
+    flex-shrink: 0;
     height: $img-size;
     width: $img-size;
-    
 
     img{
       width: 100%;
@@ -52,6 +63,10 @@ $img-size: 6rem;
   }
   &:hover{
     transform: scale(1.1);
+  }
+
+  &--special{
+    border: 2px solid $danger;
   }
 }
 </style>
