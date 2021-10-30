@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero text-light">
     <vueper-slides
       :parallax="parallax"
       :parallax-fixed-content="parallaxFixedContent"

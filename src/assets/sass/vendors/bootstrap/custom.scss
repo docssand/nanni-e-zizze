@@ -23,7 +23,7 @@ $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
+$red:     #BA2D0B;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
@@ -31,8 +31,9 @@ $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $colors: (
-  "nianza": #EAF4D3,
-  "nickel": #626C66,
+  "ecru": #F9F7F0,
+  "gunmetal": #21242c,
+  "nickel": #484e4a,
   "brass": #CA907E,
   "chestnut": #994636,
   "rifle-green": #434A42
@@ -44,8 +45,8 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       color("chestnut");
 $danger:        $red !default;
-$light:         color("nianza");
-$dark:          color("rifle-green");
+$light:         color("ecru");
+$dark:          color("gunmetal");
 
 $theme-colors: () !default;
 
@@ -113,7 +114,7 @@ $body-color:                $gray-900 !default;
 //
 // Style anchor elements.
 
-$link-color:                              $warning;
+$link-color:                              $danger;
 $link-decoration:                         none !default;
 $link-hover-color:                        darken($link-color, 15%) !default;
 $link-hover-decoration:                   underline !default;
@@ -179,7 +180,7 @@ $border-radius-sm:            .2rem !default;
 $rounded-pill:                50rem !default;
 
 $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
+$box-shadow:                   0 0.5rem 22px 5px rgba(0, 0, 0, 0.4);
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
 $component-active-color:      $white !default;

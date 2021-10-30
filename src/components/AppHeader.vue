@@ -1,6 +1,6 @@
 <template>
   <section class="header text-center
-        py-4 position-sticky bg-light">
+        py-4 position-sticky bg-dark text-light">
     <div
       class="header__content d-flex flex-column flex-md-row align-items-center justify-content-center"
     >
@@ -18,7 +18,7 @@
       </picture>
       </div>
       <div class="header__menu d-none d-md-block">
-        <a href="#menu" class="header__menu d-none d-md-inline">Menù</a>
+        <a href="#menu" class="header__menu text-uppercase d-none d-md-inline">Menù</a>
       </div>
       <div class="header__maps d-flex align-items-center">
         <div class="text-right">

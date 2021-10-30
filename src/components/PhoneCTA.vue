@@ -53,6 +53,8 @@ $phone-cta-size: 6rem;
   bottom: 10px;
   right: 10px;
 
+  z-index: 10;
+
   height:$phone-cta-size;
   width: $phone-cta-size;
   
