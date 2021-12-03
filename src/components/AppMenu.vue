@@ -1,5 +1,5 @@
 <template>
-  <section class="menu text-light py-5">
+  <section class="menu text-dark py-5">
     <div class="menu__title text-center pb-4">
       <h3 v-html="menuTitle"></h3>
     </div>

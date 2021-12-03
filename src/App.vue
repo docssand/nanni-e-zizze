@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-dark">
+  <div id="app" class="bg-light">
     <app-header />
     <app-hero :slides="heroSlides" />
    <div id="menu">

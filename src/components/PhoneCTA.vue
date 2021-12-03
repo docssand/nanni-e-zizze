@@ -2,7 +2,6 @@
   <div
     class="
       phone-cta
-      
       position-fixed
     "
     @mouseover="hover = true"
@@ -65,7 +64,7 @@ $phone-cta-size: 6rem;
     border-radius: 50%;
     position: relative;
     z-index: 10;
-    background: #e0e0e0;
+    background: $black;
     -webkit-transition: box-shadow 0.5s ease-out;
     -moz-transition: box-shadow 0.5s ease-out;
     -o-transition: box-shadow 0.5s ease-out;
@@ -96,7 +95,7 @@ $phone-cta-size: 6rem;
       z-index: 5;
       right: calc(#{$phone-cta-size} * 0.5);
       height: $phone-cta-size;
-      width: 40vw;
+      width: 25rem;
       border-bottom-left-radius: 50px;
       border-top-left-radius: 50px;
       background-color: #e0e0e0;

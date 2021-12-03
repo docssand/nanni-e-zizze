@@ -39,7 +39,7 @@ $colors: (
   "rifle-green": #434A42
 );
 
-$primary:       color("brass");
+$primary:       $red;
 $secondary:     color("nickel");
 $success:       $green !default;
 $info:          $cyan !default;

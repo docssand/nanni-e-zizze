@@ -1,24 +1,14 @@
 <template>
   <section class="header text-center
-        py-4 position-sticky bg-dark text-light">
+        py-4 position-sticky bg-light">
     <div
-      class="header__content d-flex flex-column flex-md-row align-items-center justify-content-center"
+      class="header__content container d-flex flex-column flex-md-row align-items-center justify-content-center"
     >
-      <div class="header__logo">
-        <picture>
-        <source
-          srcset="@/assets/images/logo-mobile.png"
-          media="(min-width: 800px)"
-        />
-        <img
-          class="header__logo px-4"
-          src="@/assets/images/logo-mobile.png"
-          alt="logo Nanni e Zizze"
-        />
-      </picture>
+      <div class="header__logo h1 text-dark">
+        <span><span class="text-primary">N</span>anni e <span class="text-primary">Z</span>izze</span>
       </div>
       <div class="header__menu d-none d-md-block">
-        <a href="#menu" class="header__menu text-uppercase d-none d-md-inline">Menù</a>
+        <a href="#menu" class="header__menu text-dark text-uppercase d-none d-md-inline"><span class="text-primary">M</span>enù</a>
       </div>
       <div class="header__maps d-flex align-items-center">
         <div class="text-right">
@@ -49,6 +39,10 @@ export default {
   z-index: 5;
   box-shadow: 0px 10px 10px 0px rgba($color: #000000, $alpha: 0.25);
 
+  &__logo, &__menu, &__maps {
+    font-family:'dk-lunisolar-regular', sans-serif;
+  }
+
   &__logo {
     display: flex;
     justify-self: left;
@@ -57,6 +51,7 @@ export default {
   &__menu {
     font-size: 2rem;
     grid-area: menu;
+    
   }
   &__maps {
     grid-area: maps;
@@ -75,7 +70,7 @@ export default {
     flex: 0 1 50rem;
   }
   &__maps {
-    flex: 0 1 20rem;
+    flex: 0 1 25rem;
   }
   }
 }
