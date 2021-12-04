@@ -21,7 +21,7 @@
       justify-content-center
       align-items-center" :class="{ 'phone-cta__content--active': hover }">
       <font-awesome-icon
-        class="ico text-primary"
+        class="ico"
         icon="phone"
         href="tel:3333333333"
       />
@@ -64,7 +64,7 @@ $phone-cta-size: 6rem;
     border-radius: 50%;
     position: relative;
     z-index: 10;
-    background: $black;
+    background: $primary;
     -webkit-transition: box-shadow 0.5s ease-out;
     -moz-transition: box-shadow 0.5s ease-out;
     -o-transition: box-shadow 0.5s ease-out;
@@ -73,17 +73,18 @@ $phone-cta-size: 6rem;
     .ico {
       font-size: 2rem;
       transition: all 0.5s ease-out;
+      color: #000000;
     }
 
     
 
     &--active {
-      background: #e0e0e0;
-      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-      box-shadow: inset 20px 20px 60px #bebebe, inset -20px -20px 60px #ffffff;
+      box-shadow: 20px 20px 60px #000000, -20px -20px 60px #000000;
+      box-shadow: inset 20px 20px 60px #800404, inset -20px -20px 60px #800404;
 
       .ico {
         font-size: 2.75rem;
+        color: white;
       }
     }
   }
@@ -98,7 +99,7 @@ $phone-cta-size: 6rem;
       width: 25rem;
       border-bottom-left-radius: 50px;
       border-top-left-radius: 50px;
-      background-color: #e0e0e0;
+      background-color: $light;
       box-shadow: inset 1px 1px 50px 1px rgba($color: #000000, $alpha: .25);
 
       &--active {

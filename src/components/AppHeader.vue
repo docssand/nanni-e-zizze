@@ -40,7 +40,7 @@ export default {
   box-shadow: 0px 10px 10px 0px rgba($color: #000000, $alpha: 0.25);
 
   &__logo, &__menu, &__maps {
-    font-family:'dk-lunisolar-regular', sans-serif;
+    font-family:'DK Lunisolar', sans-serif;
   }
 
   &__logo {
@@ -64,7 +64,7 @@ export default {
 
   @include media-breakpoint-up("md") {
     &__logo {
-    flex: 0 1 20rem;
+    flex: 0 1 30rem;
   }
   &__menu {
     flex: 0 1 50rem;

@@ -2,11 +2,12 @@
   <div id="app" class="bg-light">
     <app-header />
     <app-hero :slides="heroSlides" />
-   <div id="menu">
-      <app-menu menuTitle="Pizze a rotazione" :ingredients="ingredients" :products="specials" />
-      <app-menu menuTitle="Pizze tonde" :ingredients="ingredients" :products="products" />
-      <app-menu menuTitle="Pizze al taglio" :ingredients="ingredients" :products="products" />
-   </div>
+    <div v-for="(menu, i) in menus" :key="i">
+      <b-button :v-b-toggle="'menu-' + i" variant="primary">{{menu.title}}</b-button>
+      <b-collapse :id="`menu-${i}`" class="mt-2">
+        <app-menu :menuTitle="menu.title" :ingredients="menu.ingredients" :products="menu.products" />
+      </b-collapse>
+     </div>
     <phoneCTA @openPhoneModal="openPhoneModal" />
     <app-modal />
   </div>
@@ -30,6 +31,23 @@ export default {
   },
   data() {
     return {
+      menus: [
+        {
+          title: 'Pizze a rotazione',
+          ingredients: this.ingredients,
+          products: this.specials,
+        },
+        {
+          title: 'Pizze tonde',
+          ingredients: this.ingredients,
+          products: this.specials,
+        },
+        {
+          title: 'Pizze al taglio',
+          ingredients: this.ingredients,
+          products: this.specials,
+        }
+      ],
       ingredients: [
         {
           name: "salsiccia secca",
